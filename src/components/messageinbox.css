@@ -1,0 +1,14 @@
+.message-inbox-header {
+	display: 'flex';
+	justify-content: 'space-between';
+	padding: '10px 5px';
+}
+.message-box {
+	display: 'flex';
+	justify-content: 'space-between';
+	padding: '10px 5px';
+}
+
+.message-box:hover {
+	background-color: rgb(71, 81, 86);
+}

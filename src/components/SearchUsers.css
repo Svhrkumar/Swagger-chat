@@ -1,0 +1,12 @@
+.user-ctn {
+	background-color: #242b2e;
+}
+.user-profile {
+	height: '30px';
+	padding: '10px 5px';
+	display: 'flex';
+
+	align-content: 'center';
+	justify-content: 'space-between';
+	margin: '20px 5px';
+}

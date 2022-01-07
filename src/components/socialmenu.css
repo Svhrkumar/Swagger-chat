@@ -1,0 +1,18 @@
+.test {
+	background-color: '#03203C';
+}
+.social-icons {
+	margin: 15px 10px;
+}
+.social-icon-ctn {
+	margin: 40px 20px;
+	display: 'flex';
+	flex-direction: 'column';
+	justify-content: 'space-evenly';
+}
+
+.message-header-ctn {
+	display: 'flex';
+	justify-content: 'space-between';
+	padding: '10px 5px';
+}
