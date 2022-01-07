@@ -83,7 +83,7 @@ const ChatBox = () => {
 				image:
 					'https://pbs.twimg.com/profile_images/1116431270697766912/-NfnQHvh_400x400.jpg',
 			};
-			if (message != '') {
+			if (message !== '') {
 				setChatData([...chatData, newMessage]);
 				scrollToBottom();
 				setMessage('');

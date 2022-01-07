@@ -10,10 +10,10 @@ const SocialMenu = ({ messageHandle }) => {
 	const [selectIcon, setSelectIcon] = useState('facebook');
 
 	const handleClick = (data) => {
+		console.log('click');
 		messageHandle(data);
 	};
 
-	console.log(messageHandle);
 	// useEffect(() => {
 	// 	props.messageHandle(selectIcon);
 	// }, []);
