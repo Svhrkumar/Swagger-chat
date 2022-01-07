@@ -5,10 +5,11 @@
 	margin: 15px 10px;
 }
 .social-icon-ctn {
-	margin: 40px 20px;
+	margin: 40px 25px;
 	display: 'flex';
 	flex-direction: 'column';
 	justify-content: 'space-evenly';
+	align-items: center;
 }
 
 .message-header-ctn {

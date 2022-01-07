@@ -18,7 +18,7 @@ const MessageInbox = ({ manageIcons }) => {
 				style={{
 					display: 'flex',
 					justifyContent: 'space-between',
-					padding: '10px 5px',
+					padding: '15px 5px',
 				}}>
 				{facebook ? (
 					<h5 style={{ color: 'white' }}> facebook Inbox </h5>

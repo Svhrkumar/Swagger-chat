@@ -18,6 +18,9 @@ const SocialMenu = ({ messageHandle }) => {
 	// 	props.messageHandle(selectIcon);
 	// }, []);
 	console.log(selectIcon);
+	const bgcolor = {
+		backgroundColor: 'rgb(71, 81, 86)',
+	};
 	return (
 		<div
 			className='col-1 test'
@@ -25,7 +28,7 @@ const SocialMenu = ({ messageHandle }) => {
 				backgroundColor: '#0D0D0D',
 			}}>
 			<div style={{ marginTop: '10px', textAlign: 'center' }}>
-				<MenuIcon style={{ fontSize: '25px', color: 'white' }} />
+				<MenuIcon style={{ fontSize: '35px', color: 'white' }} />
 			</div>
 			<div className='social-icon-ctn'>
 				<img
