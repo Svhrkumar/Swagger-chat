@@ -3,6 +3,7 @@
 }
 .social-icons {
 	margin: 15px 10px;
+	cursor: pointer;
 }
 .social-icon-ctn {
 	margin: 40px 25px;
