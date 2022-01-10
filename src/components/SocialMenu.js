@@ -11,7 +11,7 @@ import { MENU_OPEN } from '../redux/action.type';
 
 const SocialMenu = (props) => {
 	const [selectIcon, setSelectIcon] = useState('facebook');
-	// const [openMenu, setOpenMenu] = useState(false);
+
 	const userSearchDetails = useSelector((state) => state.userSearchDetails);
 	const { openMenu } = userSearchDetails;
 	const dispatch = useDispatch();
@@ -34,9 +34,6 @@ const SocialMenu = (props) => {
 		}
 	};
 
-	// useEffect(() => {
-	// 	props.menuClick(openMenu);
-	// }, [openMenu]);
 	console.log(selectIcon, openMenu);
 
 	const bgcolor = {

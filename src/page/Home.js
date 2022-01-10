@@ -12,7 +12,7 @@ const Home = () => {
 	const [whatsapp, setWhatsapp] = useState(false);
 	const [twitter, setTwitter] = useState(false);
 	const [youtube, setYoutube] = useState(false);
-	// const [openMenu, setOpenMenu] = useState();
+
 	const [wide, setWide] = useState(false);
 	const userSearchDetails = useSelector((state) => state.userSearchDetails);
 	const { openMenu } = userSearchDetails;
@@ -61,17 +61,6 @@ const Home = () => {
 			setYoutube(true);
 		}
 	};
-
-	// const menuClick = (click) => {
-	// 	console.log('home click');
-	// 	if (openMenu == click) {
-	// 		setOpenMenu(true);
-	// 		setWide(true);
-	// 	} else {
-	// 		setOpenMenu(false);
-	// 		setWide(false);
-	// 	}
-	// };
 
 	console.log('-----------------', wide, openMenu, manageIcons);
 	return (
