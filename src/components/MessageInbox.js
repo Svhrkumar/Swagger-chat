@@ -4,6 +4,7 @@ import './messageinbox.css';
 
 const MessageInbox = ({ manageIcons }) => {
 	console.log('icons', manageIcons);
+	console.log('render...');
 	const { facebook, instagram, whatsapp, twitter, youtube } = manageIcons;
 	return (
 		<div

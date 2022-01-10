@@ -25,9 +25,9 @@
 	color: #000;
 }
 .content__body {
-	height: 73vh;
+	height: 80vh;
 	overflow: auto;
-	margin: 45px 5px;
+	margin: 20px 5px;
 }
 .chat__item {
 	display: flex;
@@ -133,4 +133,24 @@
 }
 p {
 	margin-bottom: 0rem;
+}
+::-webkit-scrollbar {
+	width: 5px;
+	border-radius: 9px;
+	height: 40px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }

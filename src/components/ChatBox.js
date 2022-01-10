@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo } from 'react';
+import React, { useState, useEffect } from 'react';
 import StarIcon from '@mui/icons-material/Star';
 import CallIcon from '@mui/icons-material/Call';
 import VideocamIcon from '@mui/icons-material/Videocam';
@@ -7,7 +7,9 @@ import SendIcon from '@mui/icons-material/Send';
 import ChartItem from './ChartItem';
 import './chatItem.css';
 
-const ChatBox = () => {
+const ChatBox = ({ openMenu }) => {
+	console.log('open----------', openMenu);
+
 	var conversation = [
 		{
 			key: 1,
@@ -62,8 +64,11 @@ const ChatBox = () => {
 	const [chatData, setChatData] = useState(conversation);
 	const [message, setMessage] = useState('');
 	const [sent, setSent] = useState(false);
+	const [wide, setWide] = useState();
 
-	useEffect(() => {}, []);
+	useEffect(() => {
+		setWide(openMenu);
+	}, [openMenu]);
 	// const scrollToBottom = () => {
 	// 	messageRef.current.scrollIntoView({ behavior: 'smooth' });
 	// };
@@ -120,7 +125,9 @@ const ChatBox = () => {
 		);
 	};
 	return (
-		<div className='col-4' style={{ backgroundColor: 'rgb(244 246 248)' }}>
+		<div
+			className={wide ? 'col-4' : 'col-6'}
+			style={{ backgroundColor: 'rgb(244 246 248)' }}>
 			<div
 				className='row'
 				style={{
@@ -188,4 +195,4 @@ const ChatBox = () => {
 	);
 };
 
-export default memo(ChatBox);
+export default ChatBox;

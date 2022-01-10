@@ -8,5 +8,30 @@
 
 	align-content: 'center';
 	justify-content: 'space-between';
-	margin: '20px 5px';
+	margin: '30px 5px';
+}
+
+.suggestion-ctn {
+	background-color: white;
+	display: flex;
+	height: 80px;
+	padding: 15px 10px;
+	color: grey;
+	align-content: center;
+	border-radius: 0px;
+}
+.suggestion-avatar-ctn {
+	margin: 0px 20px;
+}
+.suggestion-details-ctn {
+	margin: 0px 10px;
+}
+
+.ActiveUser-ctn {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 80vh;
+	overflow: auto;
+	overflow-x: hidden;
 }

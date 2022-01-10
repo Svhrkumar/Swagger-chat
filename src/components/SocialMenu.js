@@ -6,18 +6,39 @@ import four from '../images/four.png';
 import five from '../images/five.png';
 import styles from './socialmenu.css';
 import MenuIcon from '@mui/icons-material/Menu';
-const SocialMenu = ({ messageHandle }) => {
-	const [selectIcon, setSelectIcon] = useState('facebook');
+import { useSelector, useDispatch } from 'react-redux';
+import { MENU_OPEN } from '../redux/action.type';
 
+const SocialMenu = (props) => {
+	const [selectIcon, setSelectIcon] = useState('facebook');
+	// const [openMenu, setOpenMenu] = useState(false);
+	const userSearchDetails = useSelector((state) => state.userSearchDetails);
+	const { openMenu } = userSearchDetails;
+	const dispatch = useDispatch();
 	const handleClick = (data) => {
 		console.log('click');
-		messageHandle(data);
+		props.messageHandle(data);
+	};
+
+	const handleMenu = () => {
+		if (openMenu) {
+			dispatch({
+				type: MENU_OPEN,
+				payload: false,
+			});
+		} else {
+			dispatch({
+				type: MENU_OPEN,
+				payload: true,
+			});
+		}
 	};
 
 	// useEffect(() => {
-	// 	props.messageHandle(selectIcon);
-	// }, []);
-	console.log(selectIcon);
+	// 	props.menuClick(openMenu);
+	// }, [openMenu]);
+	console.log(selectIcon, openMenu);
+
 	const bgcolor = {
 		backgroundColor: 'rgb(71, 81, 86)',
 	};
@@ -27,8 +48,11 @@ const SocialMenu = ({ messageHandle }) => {
 			style={{
 				backgroundColor: '#0D0D0D',
 			}}>
-			<div style={{ marginTop: '10px', textAlign: 'center' }}>
-				<MenuIcon style={{ fontSize: '35px', color: 'white' }} />
+			<div
+				style={{ marginTop: '10px', textAlign: 'center', cursor: 'pointer' }}>
+				<a onClick={handleMenu}>
+					<MenuIcon style={{ fontSize: '35px', color: 'white' }} />
+				</a>
 			</div>
 			<div className='social-icon-ctn'>
 				<img
