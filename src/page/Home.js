@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 import ChatBox from '../components/ChatBox';
 import MessageInbox from '../components/MessageInbox';
 import Profile from '../components/Profile';
 import SearchUsers from '../components/SearchUsers';
 import SocialMenu from '../components/SocialMenu';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 const Home = () => {
 	const [facebook, setFacebook] = useState(false);
 	const [instagram, setInstagram] = useState(false);
@@ -13,7 +13,6 @@ const Home = () => {
 	const [twitter, setTwitter] = useState(false);
 	const [youtube, setYoutube] = useState(false);
 
-	const [wide, setWide] = useState(false);
 	const userSearchDetails = useSelector((state) => state.userSearchDetails);
 	const { openMenu } = userSearchDetails;
 	const manageIcons = {
@@ -62,7 +61,7 @@ const Home = () => {
 		}
 	};
 
-	console.log('-----------------', wide, openMenu, manageIcons);
+	console.log('-----------------', openMenu, manageIcons);
 	return (
 		<div className='container-xxl' style={{ maxWidth: '100%' }}>
 			<div className='row'>

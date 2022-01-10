@@ -9,10 +9,8 @@ import {
 	ACTIVE_CONVERSATION_USER,
 	SEARCH_USER_DATA,
 } from '../redux/action.type';
-import { ConstructionOutlined } from '@mui/icons-material';
-import { chatDataAction } from '../redux/action/chatAction';
+
 const SearchUsers = () => {
-	const [userData, setUserData] = useState([]);
 	const [searchUser, setSearchUser] = useState('');
 	const [matchUser, setMatchUser] = useState([]);
 	const [activeUser, setActiveUsers] = useState([]);
@@ -55,7 +53,7 @@ const SearchUsers = () => {
 		});
 		setSearchUser(text);
 		setMatchUser(matchData);
-		if (text.length == 0) {
+		if (text.length === 0) {
 			setMatchUser([]);
 		}
 	};
